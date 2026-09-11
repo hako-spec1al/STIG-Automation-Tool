@@ -1,0 +1,741 @@
+{
+  "metadata": {
+    "hostname": "ip-172-31-8-148",
+    "mode": "ssh",
+    "timestamp": "2025-12-26T06:47:13.151600",
+    "auto_remediate": false
+  },
+  "timestamp": "2025-12-26T06:49:36.306603",
+  "pre_check": {
+    "summary": {
+      "total": 35,
+      "passed": 12,
+      "failed": 23,
+      "errors": 0,
+      "compliance_rate": 34.29
+    },
+    "results": [
+      {
+        "rule_id": "UBTU-24-90890",
+        "title": "System must use encryption to protect audit tools",
+        "severity": "high",
+        "category": "integrity",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "FAIL: AIDE configuration file not found",
+        "timestamp": "2025-12-26T06:47:13.153599"
+      },
+      {
+        "rule_id": "UBTU-24-100010",
+        "title": "System must not have systemd-timesyncd package installed",
+        "severity": "high",
+        "category": "system_configuration",
+        "status": "PASS",
+        "message": "Compliant",
+        "details": "PASS: systemd-timesyncd is not installed",
+        "timestamp": "2025-12-26T06:47:17.342016"
+      },
+      {
+        "rule_id": "UBTU-24-100020",
+        "title": "System must not have ntp package installed",
+        "severity": "high",
+        "category": "system_configuration",
+        "status": "PASS",
+        "message": "Compliant",
+        "details": "PASS: ntp package is not installed",
+        "timestamp": "2025-12-26T06:47:21.422221"
+      },
+      {
+        "rule_id": "UBTU-24-100030",
+        "title": "System must not have telnetd package installed",
+        "severity": "high",
+        "category": "network_security",
+        "status": "PASS",
+        "message": "Compliant",
+        "details": "PASS: telnetd package is not installed",
+        "timestamp": "2025-12-26T06:47:25.511538"
+      },
+      {
+        "rule_id": "UBTU-24-100040",
+        "title": "System must not have rsh-server package installed",
+        "severity": "high",
+        "category": "network_security",
+        "status": "PASS",
+        "message": "Compliant",
+        "details": "PASS: rsh-server package is not installed",
+        "timestamp": "2025-12-26T06:47:29.592526"
+      },
+      {
+        "rule_id": "UBTU-24-100100",
+        "title": "OS must install AIDE for integrity checking",
+        "severity": "high",
+        "category": "integrity",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "FAIL: AIDE is not installed",
+        "timestamp": "2025-12-26T06:47:33.664810"
+      },
+      {
+        "rule_id": "UBTU-24-100110",
+        "title": "Configure AIDE to perform integrity checks",
+        "severity": "high",
+        "category": "integrity",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "FAIL: AIDE database not initialized (run aideinit)",
+        "timestamp": "2025-12-26T06:47:37.721409"
+      },
+      {
+        "rule_id": "UBTU-24-100120",
+        "title": "AIDE must use default script to run periodically",
+        "severity": "medium",
+        "category": "integrity",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "FAIL: AIDE cron job not found or not executable\nls: cannot access '/etc/cron.daily/aide': No such file or directory\nFile does not exist",
+        "timestamp": "2025-12-26T06:47:41.804296"
+      },
+      {
+        "rule_id": "UBTU-24-100130",
+        "title": "AIDE must send alerts when baseline is changed",
+        "severity": "medium",
+        "category": "integrity",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "FAIL: AIDE not configured",
+        "timestamp": "2025-12-26T06:47:45.881064"
+      },
+      {
+        "rule_id": "UBTU-24-100200",
+        "title": "OS must store failure events using rsyslog",
+        "severity": "high",
+        "category": "auditing",
+        "status": "PASS",
+        "message": "Compliant",
+        "details": "PASS: rsyslog is installed, enabled, and running",
+        "timestamp": "2025-12-26T06:47:49.895737"
+      },
+      {
+        "rule_id": "UBTU-24-100300",
+        "title": "Must install a firewall application (UFW)",
+        "severity": "high",
+        "category": "network_security",
+        "status": "PASS",
+        "message": "Compliant",
+        "details": "PASS: UFW is installed",
+        "timestamp": "2025-12-26T06:47:54.003959"
+      },
+      {
+        "rule_id": "UBTU-24-100310",
+        "title": "Uncomplicated Firewall (UFW) must be in active state",
+        "severity": "high",
+        "category": "network_security",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "FAIL: UFW is not active (status: )",
+        "timestamp": "2025-12-26T06:47:58.071330"
+      },
+      {
+        "rule_id": "UBTU-24-100400",
+        "title": "Must install auditd service",
+        "severity": "high",
+        "category": "auditing",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "FAIL: auditd is not installed",
+        "timestamp": "2025-12-26T06:48:02.231643"
+      },
+      {
+        "rule_id": "UBTU-24-100410",
+        "title": "Auditd service must be enabled and active at boot",
+        "severity": "high",
+        "category": "auditing",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "FAIL: auditd is not installed",
+        "timestamp": "2025-12-26T06:48:06.367474"
+      },
+      {
+        "rule_id": "UBTU-24-100450",
+        "title": "Audispd must offload audit records to remote server",
+        "severity": "high",
+        "category": "auditing",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "FAIL: audispd-plugins not installed",
+        "timestamp": "2025-12-26T06:48:10.452415"
+      },
+      {
+        "rule_id": "UBTU-24-100500",
+        "title": "OS must install apparmor package",
+        "severity": "high",
+        "category": "mandatory_access_control",
+        "status": "PASS",
+        "message": "Compliant",
+        "details": "PASS: apparmor package is installed",
+        "timestamp": "2025-12-26T06:48:14.607052"
+      },
+      {
+        "rule_id": "UBTU-24-100510",
+        "title": "OS must be configured to use AppArmor",
+        "severity": "high",
+        "category": "mandatory_access_control",
+        "status": "PASS",
+        "message": "Compliant",
+        "details": "PASS: AppArmor is configured and enabled",
+        "timestamp": "2025-12-26T06:48:18.711059"
+      },
+      {
+        "rule_id": "UBTU-24-100600",
+        "title": "OS must install libpam-pwquality package",
+        "severity": "high",
+        "category": "authentication",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "FAIL: libpam-pwquality package is NOT installed",
+        "timestamp": "2025-12-26T06:48:22.765640"
+      },
+      {
+        "rule_id": "UBTU-24-100650",
+        "title": "OS must install sssd package",
+        "severity": "high",
+        "category": "authentication",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "FAIL: Missing packages: sssd libpam-sss libnss-sss",
+        "timestamp": "2025-12-26T06:48:26.840371"
+      },
+      {
+        "rule_id": "UBTU-24-100660",
+        "title": "OS must use sssd to provide multifactor authentication (MFA)",
+        "severity": "high",
+        "category": "authentication",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "FAIL: sssd.service status - enabled: not-found, active: inactive",
+        "timestamp": "2025-12-26T06:48:31.030964"
+      },
+      {
+        "rule_id": "UBTU-24-100700",
+        "title": "OS must install chrony package for time synchronization",
+        "severity": "high",
+        "category": "time_synchronization",
+        "status": "PASS",
+        "message": "Compliant",
+        "details": "PASS: chrony package is installed",
+        "timestamp": "2025-12-26T06:48:35.188059"
+      },
+      {
+        "rule_id": "UBTU-24-100800",
+        "title": "OS must install SSH (OpenSSH server)",
+        "severity": "high",
+        "category": "secure_communication",
+        "status": "PASS",
+        "message": "Compliant",
+        "details": "PASS: openssh packages (client, server, sftp-server) are installed",
+        "timestamp": "2025-12-26T06:48:39.269034"
+      },
+      {
+        "rule_id": "UBTU-24-100810",
+        "title": "OS must use SSH to protect confidentiality and integrity of information",
+        "severity": "high",
+        "category": "secure_communication",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "FAIL: SSH service status - enabled: disabled\nnot-found, active: active",
+        "timestamp": "2025-12-26T06:48:43.423898"
+      },
+      {
+        "rule_id": "UBTU-24-100820",
+        "title": "OS must configure SSH daemon to use FIPS 140-3 approved ciphers",
+        "severity": "high",
+        "category": "secure_communication",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "FAIL: SSH daemon NOT configured with FIPS 140-3 approved ciphers\nRequired: aes256-gcm@openssh.com,aes128-gcm@openssh.com,aes256-ctr,aes128-ctr",
+        "timestamp": "2025-12-26T06:48:47.530933"
+      },
+      {
+        "rule_id": "UBTU-24-100830",
+        "title": "OS must configure SSH daemon to use FIPS 140-3 approved MACs",
+        "severity": "high",
+        "category": "secure_communication",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "FAIL: SSH daemon NOT configured with FIPS 140-3 approved MACs\nRequired: hmac-sha2-512-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2-512,hmac-sha2-256",
+        "timestamp": "2025-12-26T06:48:51.601272"
+      },
+      {
+        "rule_id": "UBTU-24-100840",
+        "title": "SSH server must use only FIPS-validated key exchange algorithms",
+        "severity": "high",
+        "category": "secure_communication",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "FAIL: SSH daemon NOT configured with FIPS-validated key exchange algorithms\nRequired: ecdh-sha2-nistp521,ecdh-sha2-nistp384,ecdh-sha2-nistp256,diffie-hellman-group-exchange-sha256,diffie-hellman-group16-sha512,diffie-hellman-group14-sha256",
+        "timestamp": "2025-12-26T06:48:55.681350"
+      },
+      {
+        "rule_id": "UBTU-24-100900",
+        "title": "OS must accept PIV credentials (CAC/smart card) - install opensc-pkcs11",
+        "severity": "medium",
+        "category": "authentication",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "FAIL: opensc-pkcs11 package is NOT installed",
+        "timestamp": "2025-12-26T06:48:59.791130"
+      },
+      {
+        "rule_id": "UBTU-24-102000",
+        "title": "OS must require authentication when booting into single-user or maintenance mode",
+        "severity": "high",
+        "category": "access_control",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "FAIL: GRUB NOT configured with password authentication",
+        "timestamp": "2025-12-26T06:49:03.871051"
+      },
+      {
+        "rule_id": "UBTU-24-200060",
+        "title": "OS must automatically terminate user session after 10 minutes of inactivity",
+        "severity": "medium",
+        "category": "session_management",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "FAIL: Automatic session timeout (TMOUT=600) NOT configured",
+        "timestamp": "2025-12-26T06:49:07.905882"
+      },
+      {
+        "rule_id": "UBTU-24-200250",
+        "title": "OS must automatically expire temporary accounts within 72 hours",
+        "severity": "medium",
+        "category": "account_management",
+        "status": "PASS",
+        "message": "Compliant",
+        "details": "Checking for temporary accounts expiration...\nNOTE: No temporary accounts with expiration dates found\nPASS: No improperly configured temporary accounts detected",
+        "timestamp": "2025-12-26T06:49:11.949770"
+      },
+      {
+        "rule_id": "UBTU-24-200260",
+        "title": "OS must automatically lock user accounts after 30 days of inactivity",
+        "severity": "medium",
+        "category": "account_management",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "FAIL: INACTIVE not configured in /etc/default/useradd",
+        "timestamp": "2025-12-26T06:49:16.021943"
+      },
+      {
+        "rule_id": "UBTU-24-200000",
+        "title": "OS must limit concurrent sessions to ten for all accounts",
+        "severity": "low",
+        "category": "session_management",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "FAIL: Concurrent session limit (maxlogins 10) NOT configured",
+        "timestamp": "2025-12-26T06:49:20.071276"
+      },
+      {
+        "rule_id": "UBTU-24-300001",
+        "title": "OS must be configured to prevent APT from installing patches, service packs, device drivers",
+        "severity": "low",
+        "category": "software_integrity",
+        "status": "PASS",
+        "message": "Compliant",
+        "details": "PASS: APT package installation controls configured",
+        "timestamp": "2025-12-26T06:49:24.150340"
+      },
+      {
+        "rule_id": "UBTU-24-300017",
+        "title": "OS must enforce delay of at least four seconds between login prompts following a failed login",
+        "severity": "low",
+        "category": "access_control",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "FAIL: pam_faildelay with 4 second delay NOT configured",
+        "timestamp": "2025-12-26T06:49:28.201130"
+      },
+      {
+        "rule_id": "UBTU-24-400340",
+        "title": "OS must be configured so PAM prohibits use of cached authentications after one day",
+        "severity": "low",
+        "category": "authentication",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "FAIL: /etc/sssd/sssd.conf not found",
+        "timestamp": "2025-12-26T06:49:32.240984"
+      }
+    ]
+  },
+  "remediation": {
+    "summary": {
+      "total": 0,
+      "success": 0,
+      "failed": 0,
+      "errors": 0,
+      "success_rate": 0.0
+    },
+    "results": []
+  },
+  "post_check": {
+    "summary": {
+      "total": 35,
+      "passed": 12,
+      "failed": 23,
+      "errors": 0,
+      "compliance_rate": 34.29
+    },
+    "results": [
+      {
+        "rule_id": "UBTU-24-90890",
+        "title": "System must use encryption to protect audit tools",
+        "severity": "high",
+        "category": "integrity",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "FAIL: AIDE configuration file not found",
+        "timestamp": "2025-12-26T06:47:13.153599"
+      },
+      {
+        "rule_id": "UBTU-24-100010",
+        "title": "System must not have systemd-timesyncd package installed",
+        "severity": "high",
+        "category": "system_configuration",
+        "status": "PASS",
+        "message": "Compliant",
+        "details": "PASS: systemd-timesyncd is not installed",
+        "timestamp": "2025-12-26T06:47:17.342016"
+      },
+      {
+        "rule_id": "UBTU-24-100020",
+        "title": "System must not have ntp package installed",
+        "severity": "high",
+        "category": "system_configuration",
+        "status": "PASS",
+        "message": "Compliant",
+        "details": "PASS: ntp package is not installed",
+        "timestamp": "2025-12-26T06:47:21.422221"
+      },
+      {
+        "rule_id": "UBTU-24-100030",
+        "title": "System must not have telnetd package installed",
+        "severity": "high",
+        "category": "network_security",
+        "status": "PASS",
+        "message": "Compliant",
+        "details": "PASS: telnetd package is not installed",
+        "timestamp": "2025-12-26T06:47:25.511538"
+      },
+      {
+        "rule_id": "UBTU-24-100040",
+        "title": "System must not have rsh-server package installed",
+        "severity": "high",
+        "category": "network_security",
+        "status": "PASS",
+        "message": "Compliant",
+        "details": "PASS: rsh-server package is not installed",
+        "timestamp": "2025-12-26T06:47:29.592526"
+      },
+      {
+        "rule_id": "UBTU-24-100100",
+        "title": "OS must install AIDE for integrity checking",
+        "severity": "high",
+        "category": "integrity",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "FAIL: AIDE is not installed",
+        "timestamp": "2025-12-26T06:47:33.664810"
+      },
+      {
+        "rule_id": "UBTU-24-100110",
+        "title": "Configure AIDE to perform integrity checks",
+        "severity": "high",
+        "category": "integrity",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "FAIL: AIDE database not initialized (run aideinit)",
+        "timestamp": "2025-12-26T06:47:37.721409"
+      },
+      {
+        "rule_id": "UBTU-24-100120",
+        "title": "AIDE must use default script to run periodically",
+        "severity": "medium",
+        "category": "integrity",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "FAIL: AIDE cron job not found or not executable\nls: cannot access '/etc/cron.daily/aide': No such file or directory\nFile does not exist",
+        "timestamp": "2025-12-26T06:47:41.804296"
+      },
+      {
+        "rule_id": "UBTU-24-100130",
+        "title": "AIDE must send alerts when baseline is changed",
+        "severity": "medium",
+        "category": "integrity",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "FAIL: AIDE not configured",
+        "timestamp": "2025-12-26T06:47:45.881064"
+      },
+      {
+        "rule_id": "UBTU-24-100200",
+        "title": "OS must store failure events using rsyslog",
+        "severity": "high",
+        "category": "auditing",
+        "status": "PASS",
+        "message": "Compliant",
+        "details": "PASS: rsyslog is installed, enabled, and running",
+        "timestamp": "2025-12-26T06:47:49.895737"
+      },
+      {
+        "rule_id": "UBTU-24-100300",
+        "title": "Must install a firewall application (UFW)",
+        "severity": "high",
+        "category": "network_security",
+        "status": "PASS",
+        "message": "Compliant",
+        "details": "PASS: UFW is installed",
+        "timestamp": "2025-12-26T06:47:54.003959"
+      },
+      {
+        "rule_id": "UBTU-24-100310",
+        "title": "Uncomplicated Firewall (UFW) must be in active state",
+        "severity": "high",
+        "category": "network_security",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "FAIL: UFW is not active (status: )",
+        "timestamp": "2025-12-26T06:47:58.071330"
+      },
+      {
+        "rule_id": "UBTU-24-100400",
+        "title": "Must install auditd service",
+        "severity": "high",
+        "category": "auditing",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "FAIL: auditd is not installed",
+        "timestamp": "2025-12-26T06:48:02.231643"
+      },
+      {
+        "rule_id": "UBTU-24-100410",
+        "title": "Auditd service must be enabled and active at boot",
+        "severity": "high",
+        "category": "auditing",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "FAIL: auditd is not installed",
+        "timestamp": "2025-12-26T06:48:06.367474"
+      },
+      {
+        "rule_id": "UBTU-24-100450",
+        "title": "Audispd must offload audit records to remote server",
+        "severity": "high",
+        "category": "auditing",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "FAIL: audispd-plugins not installed",
+        "timestamp": "2025-12-26T06:48:10.452415"
+      },
+      {
+        "rule_id": "UBTU-24-100500",
+        "title": "OS must install apparmor package",
+        "severity": "high",
+        "category": "mandatory_access_control",
+        "status": "PASS",
+        "message": "Compliant",
+        "details": "PASS: apparmor package is installed",
+        "timestamp": "2025-12-26T06:48:14.607052"
+      },
+      {
+        "rule_id": "UBTU-24-100510",
+        "title": "OS must be configured to use AppArmor",
+        "severity": "high",
+        "category": "mandatory_access_control",
+        "status": "PASS",
+        "message": "Compliant",
+        "details": "PASS: AppArmor is configured and enabled",
+        "timestamp": "2025-12-26T06:48:18.711059"
+      },
+      {
+        "rule_id": "UBTU-24-100600",
+        "title": "OS must install libpam-pwquality package",
+        "severity": "high",
+        "category": "authentication",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "FAIL: libpam-pwquality package is NOT installed",
+        "timestamp": "2025-12-26T06:48:22.765640"
+      },
+      {
+        "rule_id": "UBTU-24-100650",
+        "title": "OS must install sssd package",
+        "severity": "high",
+        "category": "authentication",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "FAIL: Missing packages: sssd libpam-sss libnss-sss",
+        "timestamp": "2025-12-26T06:48:26.840371"
+      },
+      {
+        "rule_id": "UBTU-24-100660",
+        "title": "OS must use sssd to provide multifactor authentication (MFA)",
+        "severity": "high",
+        "category": "authentication",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "FAIL: sssd.service status - enabled: not-found, active: inactive",
+        "timestamp": "2025-12-26T06:48:31.030964"
+      },
+      {
+        "rule_id": "UBTU-24-100700",
+        "title": "OS must install chrony package for time synchronization",
+        "severity": "high",
+        "category": "time_synchronization",
+        "status": "PASS",
+        "message": "Compliant",
+        "details": "PASS: chrony package is installed",
+        "timestamp": "2025-12-26T06:48:35.188059"
+      },
+      {
+        "rule_id": "UBTU-24-100800",
+        "title": "OS must install SSH (OpenSSH server)",
+        "severity": "high",
+        "category": "secure_communication",
+        "status": "PASS",
+        "message": "Compliant",
+        "details": "PASS: openssh packages (client, server, sftp-server) are installed",
+        "timestamp": "2025-12-26T06:48:39.269034"
+      },
+      {
+        "rule_id": "UBTU-24-100810",
+        "title": "OS must use SSH to protect confidentiality and integrity of information",
+        "severity": "high",
+        "category": "secure_communication",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "FAIL: SSH service status - enabled: disabled\nnot-found, active: active",
+        "timestamp": "2025-12-26T06:48:43.423898"
+      },
+      {
+        "rule_id": "UBTU-24-100820",
+        "title": "OS must configure SSH daemon to use FIPS 140-3 approved ciphers",
+        "severity": "high",
+        "category": "secure_communication",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "FAIL: SSH daemon NOT configured with FIPS 140-3 approved ciphers\nRequired: aes256-gcm@openssh.com,aes128-gcm@openssh.com,aes256-ctr,aes128-ctr",
+        "timestamp": "2025-12-26T06:48:47.530933"
+      },
+      {
+        "rule_id": "UBTU-24-100830",
+        "title": "OS must configure SSH daemon to use FIPS 140-3 approved MACs",
+        "severity": "high",
+        "category": "secure_communication",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "FAIL: SSH daemon NOT configured with FIPS 140-3 approved MACs\nRequired: hmac-sha2-512-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2-512,hmac-sha2-256",
+        "timestamp": "2025-12-26T06:48:51.601272"
+      },
+      {
+        "rule_id": "UBTU-24-100840",
+        "title": "SSH server must use only FIPS-validated key exchange algorithms",
+        "severity": "high",
+        "category": "secure_communication",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "FAIL: SSH daemon NOT configured with FIPS-validated key exchange algorithms\nRequired: ecdh-sha2-nistp521,ecdh-sha2-nistp384,ecdh-sha2-nistp256,diffie-hellman-group-exchange-sha256,diffie-hellman-group16-sha512,diffie-hellman-group14-sha256",
+        "timestamp": "2025-12-26T06:48:55.681350"
+      },
+      {
+        "rule_id": "UBTU-24-100900",
+        "title": "OS must accept PIV credentials (CAC/smart card) - install opensc-pkcs11",
+        "severity": "medium",
+        "category": "authentication",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "FAIL: opensc-pkcs11 package is NOT installed",
+        "timestamp": "2025-12-26T06:48:59.791130"
+      },
+      {
+        "rule_id": "UBTU-24-102000",
+        "title": "OS must require authentication when booting into single-user or maintenance mode",
+        "severity": "high",
+        "category": "access_control",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "FAIL: GRUB NOT configured with password authentication",
+        "timestamp": "2025-12-26T06:49:03.871051"
+      },
+      {
+        "rule_id": "UBTU-24-200060",
+        "title": "OS must automatically terminate user session after 10 minutes of inactivity",
+        "severity": "medium",
+        "category": "session_management",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "FAIL: Automatic session timeout (TMOUT=600) NOT configured",
+        "timestamp": "2025-12-26T06:49:07.905882"
+      },
+      {
+        "rule_id": "UBTU-24-200250",
+        "title": "OS must automatically expire temporary accounts within 72 hours",
+        "severity": "medium",
+        "category": "account_management",
+        "status": "PASS",
+        "message": "Compliant",
+        "details": "Checking for temporary accounts expiration...\nNOTE: No temporary accounts with expiration dates found\nPASS: No improperly configured temporary accounts detected",
+        "timestamp": "2025-12-26T06:49:11.949770"
+      },
+      {
+        "rule_id": "UBTU-24-200260",
+        "title": "OS must automatically lock user accounts after 30 days of inactivity",
+        "severity": "medium",
+        "category": "account_management",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "FAIL: INACTIVE not configured in /etc/default/useradd",
+        "timestamp": "2025-12-26T06:49:16.021943"
+      },
+      {
+        "rule_id": "UBTU-24-200000",
+        "title": "OS must limit concurrent sessions to ten for all accounts",
+        "severity": "low",
+        "category": "session_management",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "FAIL: Concurrent session limit (maxlogins 10) NOT configured",
+        "timestamp": "2025-12-26T06:49:20.071276"
+      },
+      {
+        "rule_id": "UBTU-24-300001",
+        "title": "OS must be configured to prevent APT from installing patches, service packs, device drivers",
+        "severity": "low",
+        "category": "software_integrity",
+        "status": "PASS",
+        "message": "Compliant",
+        "details": "PASS: APT package installation controls configured",
+        "timestamp": "2025-12-26T06:49:24.150340"
+      },
+      {
+        "rule_id": "UBTU-24-300017",
+        "title": "OS must enforce delay of at least four seconds between login prompts following a failed login",
+        "severity": "low",
+        "category": "access_control",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "FAIL: pam_faildelay with 4 second delay NOT configured",
+        "timestamp": "2025-12-26T06:49:28.201130"
+      },
+      {
+        "rule_id": "UBTU-24-400340",
+        "title": "OS must be configured so PAM prohibits use of cached authentications after one day",
+        "severity": "low",
+        "category": "authentication",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "FAIL: /etc/sssd/sssd.conf not found",
+        "timestamp": "2025-12-26T06:49:32.240984"
+      }
+    ]
+  }
+}
