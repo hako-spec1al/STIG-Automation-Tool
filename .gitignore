@@ -8,3 +8,15 @@ report-template-2023 - Copy.docx
 Nhom11_ProgressRepportN.docx
 Nhom01_ProgressReport.pdf
 White and Purple Geometric Startup Pitch Presentation.pdf
+Local Demo.mp4
+ubu24.pem
+Nhom11_FinalReport.pdf
+
+# python virtual environments
+.venv/
+venv/
+env/
+
+# python cache
+__pycache__/
+*.py[cod]

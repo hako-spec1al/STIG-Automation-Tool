@@ -1,0 +1,741 @@
+{
+  "metadata": {
+    "hostname": "ip-172-31-8-148",
+    "mode": "ssh",
+    "timestamp": "2025-12-26T06:22:03.267376",
+    "auto_remediate": false
+  },
+  "timestamp": "2025-12-26T06:22:35.764079",
+  "pre_check": {
+    "summary": {
+      "total": 35,
+      "passed": 0,
+      "failed": 35,
+      "errors": 0,
+      "compliance_rate": 0.0
+    },
+    "results": [
+      {
+        "rule_id": "UBTU-24-90890",
+        "title": "System must use encryption to protect audit tools",
+        "severity": "high",
+        "category": "integrity",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "bash: C:UsersKhoa_LeDocumentsY4LTKBDAstig_automation./scripts/checksUBTU-24-90890.sh: No such file or directory",
+        "timestamp": "2025-12-26T06:22:03.267376"
+      },
+      {
+        "rule_id": "UBTU-24-100010",
+        "title": "System must not have systemd-timesyncd package installed",
+        "severity": "high",
+        "category": "system_configuration",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "bash: C:UsersKhoa_LeDocumentsY4LTKBDAstig_automation./scripts/checksUBTU-24-100010.sh: No such file or directory",
+        "timestamp": "2025-12-26T06:22:04.171700"
+      },
+      {
+        "rule_id": "UBTU-24-100020",
+        "title": "System must not have ntp package installed",
+        "severity": "high",
+        "category": "system_configuration",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "bash: C:UsersKhoa_LeDocumentsY4LTKBDAstig_automation./scripts/checksUBTU-24-100020.sh: No such file or directory",
+        "timestamp": "2025-12-26T06:22:05.107056"
+      },
+      {
+        "rule_id": "UBTU-24-100030",
+        "title": "System must not have telnetd package installed",
+        "severity": "high",
+        "category": "network_security",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "bash: C:UsersKhoa_LeDocumentsY4LTKBDAstig_automation./scripts/checksUBTU-24-100030.sh: No such file or directory",
+        "timestamp": "2025-12-26T06:22:06.031109"
+      },
+      {
+        "rule_id": "UBTU-24-100040",
+        "title": "System must not have rsh-server package installed",
+        "severity": "high",
+        "category": "network_security",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "bash: C:UsersKhoa_LeDocumentsY4LTKBDAstig_automation./scripts/checksUBTU-24-100040.sh: No such file or directory",
+        "timestamp": "2025-12-26T06:22:06.952919"
+      },
+      {
+        "rule_id": "UBTU-24-100100",
+        "title": "OS must install AIDE for integrity checking",
+        "severity": "high",
+        "category": "integrity",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "bash: C:UsersKhoa_LeDocumentsY4LTKBDAstig_automation./scripts/checksUBTU-24-100100.sh: No such file or directory",
+        "timestamp": "2025-12-26T06:22:07.863203"
+      },
+      {
+        "rule_id": "UBTU-24-100110",
+        "title": "Configure AIDE to perform integrity checks",
+        "severity": "high",
+        "category": "integrity",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "bash: C:UsersKhoa_LeDocumentsY4LTKBDAstig_automation./scripts/checksUBTU-24-100110.sh: No such file or directory",
+        "timestamp": "2025-12-26T06:22:08.771196"
+      },
+      {
+        "rule_id": "UBTU-24-100120",
+        "title": "AIDE must use default script to run periodically",
+        "severity": "medium",
+        "category": "integrity",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "bash: C:UsersKhoa_LeDocumentsY4LTKBDAstig_automation./scripts/checksUBTU-24-100120.sh: No such file or directory",
+        "timestamp": "2025-12-26T06:22:09.720065"
+      },
+      {
+        "rule_id": "UBTU-24-100130",
+        "title": "AIDE must send alerts when baseline is changed",
+        "severity": "medium",
+        "category": "integrity",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "bash: C:UsersKhoa_LeDocumentsY4LTKBDAstig_automation./scripts/checksUBTU-24-100130.sh: No such file or directory",
+        "timestamp": "2025-12-26T06:22:10.643074"
+      },
+      {
+        "rule_id": "UBTU-24-100200",
+        "title": "OS must store failure events using rsyslog",
+        "severity": "high",
+        "category": "auditing",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "bash: C:UsersKhoa_LeDocumentsY4LTKBDAstig_automation./scripts/checksUBTU-24-100200.sh: No such file or directory",
+        "timestamp": "2025-12-26T06:22:11.559830"
+      },
+      {
+        "rule_id": "UBTU-24-100300",
+        "title": "Must install a firewall application (UFW)",
+        "severity": "high",
+        "category": "network_security",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "bash: C:UsersKhoa_LeDocumentsY4LTKBDAstig_automation./scripts/checksUBTU-24-100300.sh: No such file or directory",
+        "timestamp": "2025-12-26T06:22:12.482392"
+      },
+      {
+        "rule_id": "UBTU-24-100310",
+        "title": "Uncomplicated Firewall (UFW) must be in active state",
+        "severity": "high",
+        "category": "network_security",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "bash: C:UsersKhoa_LeDocumentsY4LTKBDAstig_automation./scripts/checksUBTU-24-100310.sh: No such file or directory",
+        "timestamp": "2025-12-26T06:22:13.410218"
+      },
+      {
+        "rule_id": "UBTU-24-100400",
+        "title": "Must install auditd service",
+        "severity": "high",
+        "category": "auditing",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "bash: C:UsersKhoa_LeDocumentsY4LTKBDAstig_automation./scripts/checksUBTU-24-100400.sh: No such file or directory",
+        "timestamp": "2025-12-26T06:22:14.321934"
+      },
+      {
+        "rule_id": "UBTU-24-100410",
+        "title": "Auditd service must be enabled and active at boot",
+        "severity": "high",
+        "category": "auditing",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "bash: C:UsersKhoa_LeDocumentsY4LTKBDAstig_automation./scripts/checksUBTU-24-100410.sh: No such file or directory",
+        "timestamp": "2025-12-26T06:22:15.234131"
+      },
+      {
+        "rule_id": "UBTU-24-100450",
+        "title": "Audispd must offload audit records to remote server",
+        "severity": "high",
+        "category": "auditing",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "bash: C:UsersKhoa_LeDocumentsY4LTKBDAstig_automation./scripts/checksUBTU-24-100450.sh: No such file or directory",
+        "timestamp": "2025-12-26T06:22:16.171245"
+      },
+      {
+        "rule_id": "UBTU-24-100500",
+        "title": "OS must install apparmor package",
+        "severity": "high",
+        "category": "mandatory_access_control",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "bash: C:UsersKhoa_LeDocumentsY4LTKBDAstig_automation./scripts/checksUBTU-24-100500.sh: No such file or directory",
+        "timestamp": "2025-12-26T06:22:17.165647"
+      },
+      {
+        "rule_id": "UBTU-24-100510",
+        "title": "OS must be configured to use AppArmor",
+        "severity": "high",
+        "category": "mandatory_access_control",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "bash: C:UsersKhoa_LeDocumentsY4LTKBDAstig_automation./scripts/checksUBTU-24-100510.sh: No such file or directory",
+        "timestamp": "2025-12-26T06:22:18.115939"
+      },
+      {
+        "rule_id": "UBTU-24-100600",
+        "title": "OS must install libpam-pwquality package",
+        "severity": "high",
+        "category": "authentication",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "bash: C:UsersKhoa_LeDocumentsY4LTKBDAstig_automation./scripts/checksUBTU-24-100600.sh: No such file or directory",
+        "timestamp": "2025-12-26T06:22:19.074905"
+      },
+      {
+        "rule_id": "UBTU-24-100650",
+        "title": "OS must install sssd package",
+        "severity": "high",
+        "category": "authentication",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "bash: C:UsersKhoa_LeDocumentsY4LTKBDAstig_automation./scripts/checksUBTU-24-100650.sh: No such file or directory",
+        "timestamp": "2025-12-26T06:22:20.024114"
+      },
+      {
+        "rule_id": "UBTU-24-100660",
+        "title": "OS must use sssd to provide multifactor authentication (MFA)",
+        "severity": "high",
+        "category": "authentication",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "bash: C:UsersKhoa_LeDocumentsY4LTKBDAstig_automation./scripts/checksUBTU-24-100660.sh: No such file or directory",
+        "timestamp": "2025-12-26T06:22:21.004705"
+      },
+      {
+        "rule_id": "UBTU-24-100700",
+        "title": "OS must install chrony package for time synchronization",
+        "severity": "high",
+        "category": "time_synchronization",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "bash: C:UsersKhoa_LeDocumentsY4LTKBDAstig_automation./scripts/checksUBTU-24-100700.sh: No such file or directory",
+        "timestamp": "2025-12-26T06:22:21.944202"
+      },
+      {
+        "rule_id": "UBTU-24-100800",
+        "title": "OS must install SSH (OpenSSH server)",
+        "severity": "high",
+        "category": "secure_communication",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "bash: C:UsersKhoa_LeDocumentsY4LTKBDAstig_automation./scripts/checksUBTU-24-100800.sh: No such file or directory",
+        "timestamp": "2025-12-26T06:22:22.863405"
+      },
+      {
+        "rule_id": "UBTU-24-100810",
+        "title": "OS must use SSH to protect confidentiality and integrity of information",
+        "severity": "high",
+        "category": "secure_communication",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "bash: C:UsersKhoa_LeDocumentsY4LTKBDAstig_automation./scripts/checksUBTU-24-100810.sh: No such file or directory",
+        "timestamp": "2025-12-26T06:22:23.765234"
+      },
+      {
+        "rule_id": "UBTU-24-100820",
+        "title": "OS must configure SSH daemon to use FIPS 140-3 approved ciphers",
+        "severity": "high",
+        "category": "secure_communication",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "bash: C:UsersKhoa_LeDocumentsY4LTKBDAstig_automation./scripts/checksUBTU-24-100820.sh: No such file or directory",
+        "timestamp": "2025-12-26T06:22:24.701745"
+      },
+      {
+        "rule_id": "UBTU-24-100830",
+        "title": "OS must configure SSH daemon to use FIPS 140-3 approved MACs",
+        "severity": "high",
+        "category": "secure_communication",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "bash: C:UsersKhoa_LeDocumentsY4LTKBDAstig_automation./scripts/checksUBTU-24-100830.sh: No such file or directory",
+        "timestamp": "2025-12-26T06:22:25.624606"
+      },
+      {
+        "rule_id": "UBTU-24-100840",
+        "title": "SSH server must use only FIPS-validated key exchange algorithms",
+        "severity": "high",
+        "category": "secure_communication",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "bash: C:UsersKhoa_LeDocumentsY4LTKBDAstig_automation./scripts/checksUBTU-24-100840.sh: No such file or directory",
+        "timestamp": "2025-12-26T06:22:26.542074"
+      },
+      {
+        "rule_id": "UBTU-24-100900",
+        "title": "OS must accept PIV credentials (CAC/smart card) - install opensc-pkcs11",
+        "severity": "medium",
+        "category": "authentication",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "bash: C:UsersKhoa_LeDocumentsY4LTKBDAstig_automation./scripts/checksUBTU-24-100900.sh: No such file or directory",
+        "timestamp": "2025-12-26T06:22:27.460975"
+      },
+      {
+        "rule_id": "UBTU-24-102000",
+        "title": "OS must require authentication when booting into single-user or maintenance mode",
+        "severity": "high",
+        "category": "access_control",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "bash: C:UsersKhoa_LeDocumentsY4LTKBDAstig_automation./scripts/checksUBTU-24-102000.sh: No such file or directory",
+        "timestamp": "2025-12-26T06:22:28.394668"
+      },
+      {
+        "rule_id": "UBTU-24-200060",
+        "title": "OS must automatically terminate user session after 10 minutes of inactivity",
+        "severity": "medium",
+        "category": "session_management",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "bash: C:UsersKhoa_LeDocumentsY4LTKBDAstig_automation./scripts/checksUBTU-24-200060.sh: No such file or directory",
+        "timestamp": "2025-12-26T06:22:29.319749"
+      },
+      {
+        "rule_id": "UBTU-24-200250",
+        "title": "OS must automatically expire temporary accounts within 72 hours",
+        "severity": "medium",
+        "category": "account_management",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "bash: C:UsersKhoa_LeDocumentsY4LTKBDAstig_automation./scripts/checksUBTU-24-200250.sh: No such file or directory",
+        "timestamp": "2025-12-26T06:22:30.254105"
+      },
+      {
+        "rule_id": "UBTU-24-200260",
+        "title": "OS must automatically lock user accounts after 30 days of inactivity",
+        "severity": "medium",
+        "category": "account_management",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "bash: C:UsersKhoa_LeDocumentsY4LTKBDAstig_automation./scripts/checksUBTU-24-200260.sh: No such file or directory",
+        "timestamp": "2025-12-26T06:22:31.172361"
+      },
+      {
+        "rule_id": "UBTU-24-200000",
+        "title": "OS must limit concurrent sessions to ten for all accounts",
+        "severity": "low",
+        "category": "session_management",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "bash: C:UsersKhoa_LeDocumentsY4LTKBDAstig_automation./scripts/checksUBTU-24-200000.sh: No such file or directory",
+        "timestamp": "2025-12-26T06:22:32.090691"
+      },
+      {
+        "rule_id": "UBTU-24-300001",
+        "title": "OS must be configured to prevent APT from installing patches, service packs, device drivers",
+        "severity": "low",
+        "category": "software_integrity",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "bash: C:UsersKhoa_LeDocumentsY4LTKBDAstig_automation./scripts/checksUBTU-24-300001.sh: No such file or directory",
+        "timestamp": "2025-12-26T06:22:33.016810"
+      },
+      {
+        "rule_id": "UBTU-24-300017",
+        "title": "OS must enforce delay of at least four seconds between login prompts following a failed login",
+        "severity": "low",
+        "category": "access_control",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "bash: C:UsersKhoa_LeDocumentsY4LTKBDAstig_automation./scripts/checksUBTU-24-300017.sh: No such file or directory",
+        "timestamp": "2025-12-26T06:22:33.909825"
+      },
+      {
+        "rule_id": "UBTU-24-400340",
+        "title": "OS must be configured so PAM prohibits use of cached authentications after one day",
+        "severity": "low",
+        "category": "authentication",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "bash: C:UsersKhoa_LeDocumentsY4LTKBDAstig_automation./scripts/checksUBTU-24-400340.sh: No such file or directory",
+        "timestamp": "2025-12-26T06:22:34.819593"
+      }
+    ]
+  },
+  "remediation": {
+    "summary": {
+      "total": 0,
+      "success": 0,
+      "failed": 0,
+      "errors": 0,
+      "success_rate": 0.0
+    },
+    "results": []
+  },
+  "post_check": {
+    "summary": {
+      "total": 35,
+      "passed": 0,
+      "failed": 35,
+      "errors": 0,
+      "compliance_rate": 0.0
+    },
+    "results": [
+      {
+        "rule_id": "UBTU-24-90890",
+        "title": "System must use encryption to protect audit tools",
+        "severity": "high",
+        "category": "integrity",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "bash: C:UsersKhoa_LeDocumentsY4LTKBDAstig_automation./scripts/checksUBTU-24-90890.sh: No such file or directory",
+        "timestamp": "2025-12-26T06:22:03.267376"
+      },
+      {
+        "rule_id": "UBTU-24-100010",
+        "title": "System must not have systemd-timesyncd package installed",
+        "severity": "high",
+        "category": "system_configuration",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "bash: C:UsersKhoa_LeDocumentsY4LTKBDAstig_automation./scripts/checksUBTU-24-100010.sh: No such file or directory",
+        "timestamp": "2025-12-26T06:22:04.171700"
+      },
+      {
+        "rule_id": "UBTU-24-100020",
+        "title": "System must not have ntp package installed",
+        "severity": "high",
+        "category": "system_configuration",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "bash: C:UsersKhoa_LeDocumentsY4LTKBDAstig_automation./scripts/checksUBTU-24-100020.sh: No such file or directory",
+        "timestamp": "2025-12-26T06:22:05.107056"
+      },
+      {
+        "rule_id": "UBTU-24-100030",
+        "title": "System must not have telnetd package installed",
+        "severity": "high",
+        "category": "network_security",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "bash: C:UsersKhoa_LeDocumentsY4LTKBDAstig_automation./scripts/checksUBTU-24-100030.sh: No such file or directory",
+        "timestamp": "2025-12-26T06:22:06.031109"
+      },
+      {
+        "rule_id": "UBTU-24-100040",
+        "title": "System must not have rsh-server package installed",
+        "severity": "high",
+        "category": "network_security",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "bash: C:UsersKhoa_LeDocumentsY4LTKBDAstig_automation./scripts/checksUBTU-24-100040.sh: No such file or directory",
+        "timestamp": "2025-12-26T06:22:06.952919"
+      },
+      {
+        "rule_id": "UBTU-24-100100",
+        "title": "OS must install AIDE for integrity checking",
+        "severity": "high",
+        "category": "integrity",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "bash: C:UsersKhoa_LeDocumentsY4LTKBDAstig_automation./scripts/checksUBTU-24-100100.sh: No such file or directory",
+        "timestamp": "2025-12-26T06:22:07.863203"
+      },
+      {
+        "rule_id": "UBTU-24-100110",
+        "title": "Configure AIDE to perform integrity checks",
+        "severity": "high",
+        "category": "integrity",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "bash: C:UsersKhoa_LeDocumentsY4LTKBDAstig_automation./scripts/checksUBTU-24-100110.sh: No such file or directory",
+        "timestamp": "2025-12-26T06:22:08.771196"
+      },
+      {
+        "rule_id": "UBTU-24-100120",
+        "title": "AIDE must use default script to run periodically",
+        "severity": "medium",
+        "category": "integrity",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "bash: C:UsersKhoa_LeDocumentsY4LTKBDAstig_automation./scripts/checksUBTU-24-100120.sh: No such file or directory",
+        "timestamp": "2025-12-26T06:22:09.720065"
+      },
+      {
+        "rule_id": "UBTU-24-100130",
+        "title": "AIDE must send alerts when baseline is changed",
+        "severity": "medium",
+        "category": "integrity",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "bash: C:UsersKhoa_LeDocumentsY4LTKBDAstig_automation./scripts/checksUBTU-24-100130.sh: No such file or directory",
+        "timestamp": "2025-12-26T06:22:10.643074"
+      },
+      {
+        "rule_id": "UBTU-24-100200",
+        "title": "OS must store failure events using rsyslog",
+        "severity": "high",
+        "category": "auditing",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "bash: C:UsersKhoa_LeDocumentsY4LTKBDAstig_automation./scripts/checksUBTU-24-100200.sh: No such file or directory",
+        "timestamp": "2025-12-26T06:22:11.559830"
+      },
+      {
+        "rule_id": "UBTU-24-100300",
+        "title": "Must install a firewall application (UFW)",
+        "severity": "high",
+        "category": "network_security",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "bash: C:UsersKhoa_LeDocumentsY4LTKBDAstig_automation./scripts/checksUBTU-24-100300.sh: No such file or directory",
+        "timestamp": "2025-12-26T06:22:12.482392"
+      },
+      {
+        "rule_id": "UBTU-24-100310",
+        "title": "Uncomplicated Firewall (UFW) must be in active state",
+        "severity": "high",
+        "category": "network_security",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "bash: C:UsersKhoa_LeDocumentsY4LTKBDAstig_automation./scripts/checksUBTU-24-100310.sh: No such file or directory",
+        "timestamp": "2025-12-26T06:22:13.410218"
+      },
+      {
+        "rule_id": "UBTU-24-100400",
+        "title": "Must install auditd service",
+        "severity": "high",
+        "category": "auditing",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "bash: C:UsersKhoa_LeDocumentsY4LTKBDAstig_automation./scripts/checksUBTU-24-100400.sh: No such file or directory",
+        "timestamp": "2025-12-26T06:22:14.321934"
+      },
+      {
+        "rule_id": "UBTU-24-100410",
+        "title": "Auditd service must be enabled and active at boot",
+        "severity": "high",
+        "category": "auditing",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "bash: C:UsersKhoa_LeDocumentsY4LTKBDAstig_automation./scripts/checksUBTU-24-100410.sh: No such file or directory",
+        "timestamp": "2025-12-26T06:22:15.234131"
+      },
+      {
+        "rule_id": "UBTU-24-100450",
+        "title": "Audispd must offload audit records to remote server",
+        "severity": "high",
+        "category": "auditing",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "bash: C:UsersKhoa_LeDocumentsY4LTKBDAstig_automation./scripts/checksUBTU-24-100450.sh: No such file or directory",
+        "timestamp": "2025-12-26T06:22:16.171245"
+      },
+      {
+        "rule_id": "UBTU-24-100500",
+        "title": "OS must install apparmor package",
+        "severity": "high",
+        "category": "mandatory_access_control",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "bash: C:UsersKhoa_LeDocumentsY4LTKBDAstig_automation./scripts/checksUBTU-24-100500.sh: No such file or directory",
+        "timestamp": "2025-12-26T06:22:17.165647"
+      },
+      {
+        "rule_id": "UBTU-24-100510",
+        "title": "OS must be configured to use AppArmor",
+        "severity": "high",
+        "category": "mandatory_access_control",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "bash: C:UsersKhoa_LeDocumentsY4LTKBDAstig_automation./scripts/checksUBTU-24-100510.sh: No such file or directory",
+        "timestamp": "2025-12-26T06:22:18.115939"
+      },
+      {
+        "rule_id": "UBTU-24-100600",
+        "title": "OS must install libpam-pwquality package",
+        "severity": "high",
+        "category": "authentication",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "bash: C:UsersKhoa_LeDocumentsY4LTKBDAstig_automation./scripts/checksUBTU-24-100600.sh: No such file or directory",
+        "timestamp": "2025-12-26T06:22:19.074905"
+      },
+      {
+        "rule_id": "UBTU-24-100650",
+        "title": "OS must install sssd package",
+        "severity": "high",
+        "category": "authentication",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "bash: C:UsersKhoa_LeDocumentsY4LTKBDAstig_automation./scripts/checksUBTU-24-100650.sh: No such file or directory",
+        "timestamp": "2025-12-26T06:22:20.024114"
+      },
+      {
+        "rule_id": "UBTU-24-100660",
+        "title": "OS must use sssd to provide multifactor authentication (MFA)",
+        "severity": "high",
+        "category": "authentication",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "bash: C:UsersKhoa_LeDocumentsY4LTKBDAstig_automation./scripts/checksUBTU-24-100660.sh: No such file or directory",
+        "timestamp": "2025-12-26T06:22:21.004705"
+      },
+      {
+        "rule_id": "UBTU-24-100700",
+        "title": "OS must install chrony package for time synchronization",
+        "severity": "high",
+        "category": "time_synchronization",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "bash: C:UsersKhoa_LeDocumentsY4LTKBDAstig_automation./scripts/checksUBTU-24-100700.sh: No such file or directory",
+        "timestamp": "2025-12-26T06:22:21.944202"
+      },
+      {
+        "rule_id": "UBTU-24-100800",
+        "title": "OS must install SSH (OpenSSH server)",
+        "severity": "high",
+        "category": "secure_communication",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "bash: C:UsersKhoa_LeDocumentsY4LTKBDAstig_automation./scripts/checksUBTU-24-100800.sh: No such file or directory",
+        "timestamp": "2025-12-26T06:22:22.863405"
+      },
+      {
+        "rule_id": "UBTU-24-100810",
+        "title": "OS must use SSH to protect confidentiality and integrity of information",
+        "severity": "high",
+        "category": "secure_communication",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "bash: C:UsersKhoa_LeDocumentsY4LTKBDAstig_automation./scripts/checksUBTU-24-100810.sh: No such file or directory",
+        "timestamp": "2025-12-26T06:22:23.765234"
+      },
+      {
+        "rule_id": "UBTU-24-100820",
+        "title": "OS must configure SSH daemon to use FIPS 140-3 approved ciphers",
+        "severity": "high",
+        "category": "secure_communication",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "bash: C:UsersKhoa_LeDocumentsY4LTKBDAstig_automation./scripts/checksUBTU-24-100820.sh: No such file or directory",
+        "timestamp": "2025-12-26T06:22:24.701745"
+      },
+      {
+        "rule_id": "UBTU-24-100830",
+        "title": "OS must configure SSH daemon to use FIPS 140-3 approved MACs",
+        "severity": "high",
+        "category": "secure_communication",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "bash: C:UsersKhoa_LeDocumentsY4LTKBDAstig_automation./scripts/checksUBTU-24-100830.sh: No such file or directory",
+        "timestamp": "2025-12-26T06:22:25.624606"
+      },
+      {
+        "rule_id": "UBTU-24-100840",
+        "title": "SSH server must use only FIPS-validated key exchange algorithms",
+        "severity": "high",
+        "category": "secure_communication",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "bash: C:UsersKhoa_LeDocumentsY4LTKBDAstig_automation./scripts/checksUBTU-24-100840.sh: No such file or directory",
+        "timestamp": "2025-12-26T06:22:26.542074"
+      },
+      {
+        "rule_id": "UBTU-24-100900",
+        "title": "OS must accept PIV credentials (CAC/smart card) - install opensc-pkcs11",
+        "severity": "medium",
+        "category": "authentication",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "bash: C:UsersKhoa_LeDocumentsY4LTKBDAstig_automation./scripts/checksUBTU-24-100900.sh: No such file or directory",
+        "timestamp": "2025-12-26T06:22:27.460975"
+      },
+      {
+        "rule_id": "UBTU-24-102000",
+        "title": "OS must require authentication when booting into single-user or maintenance mode",
+        "severity": "high",
+        "category": "access_control",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "bash: C:UsersKhoa_LeDocumentsY4LTKBDAstig_automation./scripts/checksUBTU-24-102000.sh: No such file or directory",
+        "timestamp": "2025-12-26T06:22:28.394668"
+      },
+      {
+        "rule_id": "UBTU-24-200060",
+        "title": "OS must automatically terminate user session after 10 minutes of inactivity",
+        "severity": "medium",
+        "category": "session_management",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "bash: C:UsersKhoa_LeDocumentsY4LTKBDAstig_automation./scripts/checksUBTU-24-200060.sh: No such file or directory",
+        "timestamp": "2025-12-26T06:22:29.319749"
+      },
+      {
+        "rule_id": "UBTU-24-200250",
+        "title": "OS must automatically expire temporary accounts within 72 hours",
+        "severity": "medium",
+        "category": "account_management",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "bash: C:UsersKhoa_LeDocumentsY4LTKBDAstig_automation./scripts/checksUBTU-24-200250.sh: No such file or directory",
+        "timestamp": "2025-12-26T06:22:30.254105"
+      },
+      {
+        "rule_id": "UBTU-24-200260",
+        "title": "OS must automatically lock user accounts after 30 days of inactivity",
+        "severity": "medium",
+        "category": "account_management",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "bash: C:UsersKhoa_LeDocumentsY4LTKBDAstig_automation./scripts/checksUBTU-24-200260.sh: No such file or directory",
+        "timestamp": "2025-12-26T06:22:31.172361"
+      },
+      {
+        "rule_id": "UBTU-24-200000",
+        "title": "OS must limit concurrent sessions to ten for all accounts",
+        "severity": "low",
+        "category": "session_management",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "bash: C:UsersKhoa_LeDocumentsY4LTKBDAstig_automation./scripts/checksUBTU-24-200000.sh: No such file or directory",
+        "timestamp": "2025-12-26T06:22:32.090691"
+      },
+      {
+        "rule_id": "UBTU-24-300001",
+        "title": "OS must be configured to prevent APT from installing patches, service packs, device drivers",
+        "severity": "low",
+        "category": "software_integrity",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "bash: C:UsersKhoa_LeDocumentsY4LTKBDAstig_automation./scripts/checksUBTU-24-300001.sh: No such file or directory",
+        "timestamp": "2025-12-26T06:22:33.016810"
+      },
+      {
+        "rule_id": "UBTU-24-300017",
+        "title": "OS must enforce delay of at least four seconds between login prompts following a failed login",
+        "severity": "low",
+        "category": "access_control",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "bash: C:UsersKhoa_LeDocumentsY4LTKBDAstig_automation./scripts/checksUBTU-24-300017.sh: No such file or directory",
+        "timestamp": "2025-12-26T06:22:33.909825"
+      },
+      {
+        "rule_id": "UBTU-24-400340",
+        "title": "OS must be configured so PAM prohibits use of cached authentications after one day",
+        "severity": "low",
+        "category": "authentication",
+        "status": "FAIL",
+        "message": "Non-compliant",
+        "details": "bash: C:UsersKhoa_LeDocumentsY4LTKBDAstig_automation./scripts/checksUBTU-24-400340.sh: No such file or directory",
+        "timestamp": "2025-12-26T06:22:34.819593"
+      }
+    ]
+  }
+}

@@ -1,0 +1,1153 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STIG Compliance Report - Ubuntu 24.04 LTS</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+        .container { 
+            max-width: 1400px; 
+            margin: 0 auto; 
+            background: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 8px 8px 0 0;
+        }
+        .header h1 { margin-bottom: 10px; }
+        .header p { opacity: 0.9; }
+        .metadata {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            padding: 20px 30px;
+            background: #f8f9fa;
+            border-bottom: 1px solid #dee2e6;
+        }
+        .metadata-item { }
+        .metadata-item strong { 
+            display: block; 
+            color: #666;
+            font-size: 12px;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+        .summary {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 30px;
+        }
+        .summary-card {
+            background: white;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            padding: 20px;
+        }
+        .summary-card h3 {
+            color: #495057;
+            margin-bottom: 15px;
+            font-size: 16px;
+            text-transform: uppercase;
+        }
+        .summary-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+        .stat {
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 5px;
+        }
+        .stat-value {
+            font-size: 24px;
+            font-weight: bold;
+            color: #212529;
+        }
+        .stat-label {
+            font-size: 12px;
+            color: #6c757d;
+            text-transform: uppercase;
+        }
+        .compliance-rate {
+            font-size: 32px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 15px;
+            padding: 15px;
+            background: #e7f3ff;
+            border-radius: 5px;
+        }
+        .results-section {
+            padding: 30px;
+        }
+        .results-section h2 {
+            margin-bottom: 20px;
+            color: #212529;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+        }
+        th {
+            background: #495057;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-size: 14px;
+            position: sticky;
+            top: 0;
+        }
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #dee2e6;
+            font-size: 14px;
+        }
+        tr:hover {
+            background: #f8f9fa;
+        }
+        .status-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .status-pass { background: #d4edda; color: #155724; }
+        .status-fail { background: #f8d7da; color: #721c24; }
+        .status-error { background: #fff3cd; color: #856404; }
+        .status-success { background: #d1ecf1; color: #0c5460; }
+        .severity-high { color: #dc3545; font-weight: bold; }
+        .severity-medium { color: #fd7e14; font-weight: bold; }
+        .severity-low { color: #ffc107; font-weight: bold; }
+        .improved { background: #d4edda !important; }
+        .footer {
+            padding: 20px 30px;
+            text-align: center;
+            background: #f8f9fa;
+            border-top: 1px solid #dee2e6;
+            color: #6c757d;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔒 STIG Compliance Report</h1>
+            <p>Ubuntu 24.04 LTS Security Technical Implementation Guide</p>
+        </div>
+        
+        <div class="metadata">
+            <div class="metadata-item">
+                <strong>Hostname</strong>
+                <div>ip-172-31-8-148</div>
+            </div>
+            <div class="metadata-item">
+                <strong>Report Date</strong>
+                <div>2025-12-26 06:28:34</div>
+            </div>
+            <div class="metadata-item">
+                <strong>Execution Mode</strong>
+                <div>ssh</div>
+            </div>
+            <div class="metadata-item">
+                <strong>Total Rules</strong>
+                <div>35</div>
+            </div>
+        </div>
+        
+        <div class="summary">
+            <div class="summary-card">
+                <h3>📋 Pre-Remediation Check</h3>
+                <div class="summary-stats">
+                    <div class="stat">
+                        <div class="stat-value" style="color: #28a745;">0</div>
+                        <div class="stat-label">Passed</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value" style="color: #dc3545;">35</div>
+                        <div class="stat-label">Failed</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value" style="color: #ffc107;">0</div>
+                        <div class="stat-label">Errors</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">35</div>
+                        <div class="stat-label">Total</div>
+                    </div>
+                </div>
+                <div class="compliance-rate" style="color: #dc3545;">
+                    0.0%
+                </div>
+            </div>
+            
+            <div class="summary-card">
+                <h3>🔧 Remediation</h3>
+                <div class="summary-stats">
+                    <div class="stat">
+                        <div class="stat-value" style="color: #17a2b8;">0</div>
+                        <div class="stat-label">Success</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value" style="color: #dc3545;">0</div>
+                        <div class="stat-label">Failed</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value" style="color: #ffc107;">0</div>
+                        <div class="stat-label">Errors</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">0</div>
+                        <div class="stat-label">Total</div>
+                    </div>
+                </div>
+                <div class="compliance-rate" style="color: #dc3545;">
+                    0.0%
+                </div>
+            </div>
+            
+            <div class="summary-card">
+                <h3>✅ Post-Remediation Check</h3>
+                <div class="summary-stats">
+                    <div class="stat">
+                        <div class="stat-value" style="color: #28a745;">0</div>
+                        <div class="stat-label">Passed</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value" style="color: #dc3545;">35</div>
+                        <div class="stat-label">Failed</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value" style="color: #ffc107;">0</div>
+                        <div class="stat-label">Errors</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">35</div>
+                        <div class="stat-label">Total</div>
+                    </div>
+                </div>
+                <div class="compliance-rate" style="color: #dc3545;">
+                    0.0%
+                </div>
+            </div>
+        </div>
+        
+        <div class="results-section">
+            <h2>📊 Detailed Results</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Rule ID</th>
+                        <th>Title</th>
+                        <th>Severity</th>
+                        <th>Pre-Check</th>
+                        <th>Remediation</th>
+                        <th>Post-Check</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr class="">
+                        <td><strong>1</strong></td>
+                        <td><strong>UBTU-24-90890</strong></td>
+                        <td>System must use encryption to protect audit tools</td>
+                        <td class="severity-high">high</td>
+                        <td>
+                            <span class="status-badge status-fail">
+                                FAIL
+                            </span>
+                        </td>
+                        <td>
+                            
+                            <span style="color: #6c757d;">N/A</span>
+                            
+                        </td>
+                        <td>
+                            
+                            <span class="status-badge status-fail">
+                                FAIL
+                            </span>
+                            
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr class="">
+                        <td><strong>2</strong></td>
+                        <td><strong>UBTU-24-100010</strong></td>
+                        <td>System must not have systemd-timesyncd package installed</td>
+                        <td class="severity-high">high</td>
+                        <td>
+                            <span class="status-badge status-fail">
+                                FAIL
+                            </span>
+                        </td>
+                        <td>
+                            
+                            <span style="color: #6c757d;">N/A</span>
+                            
+                        </td>
+                        <td>
+                            
+                            <span class="status-badge status-fail">
+                                FAIL
+                            </span>
+                            
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr class="">
+                        <td><strong>3</strong></td>
+                        <td><strong>UBTU-24-100020</strong></td>
+                        <td>System must not have ntp package installed</td>
+                        <td class="severity-high">high</td>
+                        <td>
+                            <span class="status-badge status-fail">
+                                FAIL
+                            </span>
+                        </td>
+                        <td>
+                            
+                            <span style="color: #6c757d;">N/A</span>
+                            
+                        </td>
+                        <td>
+                            
+                            <span class="status-badge status-fail">
+                                FAIL
+                            </span>
+                            
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr class="">
+                        <td><strong>4</strong></td>
+                        <td><strong>UBTU-24-100030</strong></td>
+                        <td>System must not have telnetd package installed</td>
+                        <td class="severity-high">high</td>
+                        <td>
+                            <span class="status-badge status-fail">
+                                FAIL
+                            </span>
+                        </td>
+                        <td>
+                            
+                            <span style="color: #6c757d;">N/A</span>
+                            
+                        </td>
+                        <td>
+                            
+                            <span class="status-badge status-fail">
+                                FAIL
+                            </span>
+                            
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr class="">
+                        <td><strong>5</strong></td>
+                        <td><strong>UBTU-24-100040</strong></td>
+                        <td>System must not have rsh-server package installed</td>
+                        <td class="severity-high">high</td>
+                        <td>
+                            <span class="status-badge status-fail">
+                                FAIL
+                            </span>
+                        </td>
+                        <td>
+                            
+                            <span style="color: #6c757d;">N/A</span>
+                            
+                        </td>
+                        <td>
+                            
+                            <span class="status-badge status-fail">
+                                FAIL
+                            </span>
+                            
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr class="">
+                        <td><strong>6</strong></td>
+                        <td><strong>UBTU-24-100100</strong></td>
+                        <td>OS must install AIDE for integrity checking</td>
+                        <td class="severity-high">high</td>
+                        <td>
+                            <span class="status-badge status-fail">
+                                FAIL
+                            </span>
+                        </td>
+                        <td>
+                            
+                            <span style="color: #6c757d;">N/A</span>
+                            
+                        </td>
+                        <td>
+                            
+                            <span class="status-badge status-fail">
+                                FAIL
+                            </span>
+                            
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr class="">
+                        <td><strong>7</strong></td>
+                        <td><strong>UBTU-24-100110</strong></td>
+                        <td>Configure AIDE to perform integrity checks</td>
+                        <td class="severity-high">high</td>
+                        <td>
+                            <span class="status-badge status-fail">
+                                FAIL
+                            </span>
+                        </td>
+                        <td>
+                            
+                            <span style="color: #6c757d;">N/A</span>
+                            
+                        </td>
+                        <td>
+                            
+                            <span class="status-badge status-fail">
+                                FAIL
+                            </span>
+                            
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr class="">
+                        <td><strong>8</strong></td>
+                        <td><strong>UBTU-24-100120</strong></td>
+                        <td>AIDE must use default script to run periodically</td>
+                        <td class="severity-medium">medium</td>
+                        <td>
+                            <span class="status-badge status-fail">
+                                FAIL
+                            </span>
+                        </td>
+                        <td>
+                            
+                            <span style="color: #6c757d;">N/A</span>
+                            
+                        </td>
+                        <td>
+                            
+                            <span class="status-badge status-fail">
+                                FAIL
+                            </span>
+                            
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr class="">
+                        <td><strong>9</strong></td>
+                        <td><strong>UBTU-24-100130</strong></td>
+                        <td>AIDE must send alerts when baseline is changed</td>
+                        <td class="severity-medium">medium</td>
+                        <td>
+                            <span class="status-badge status-fail">
+                                FAIL
+                            </span>
+                        </td>
+                        <td>
+                            
+                            <span style="color: #6c757d;">N/A</span>
+                            
+                        </td>
+                        <td>
+                            
+                            <span class="status-badge status-fail">
+                                FAIL
+                            </span>
+                            
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr class="">
+                        <td><strong>10</strong></td>
+                        <td><strong>UBTU-24-100200</strong></td>
+                        <td>OS must store failure events using rsyslog</td>
+                        <td class="severity-high">high</td>
+                        <td>
+                            <span class="status-badge status-fail">
+                                FAIL
+                            </span>
+                        </td>
+                        <td>
+                            
+                            <span style="color: #6c757d;">N/A</span>
+                            
+                        </td>
+                        <td>
+                            
+                            <span class="status-badge status-fail">
+                                FAIL
+                            </span>
+                            
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr class="">
+                        <td><strong>11</strong></td>
+                        <td><strong>UBTU-24-100300</strong></td>
+                        <td>Must install a firewall application (UFW)</td>
+                        <td class="severity-high">high</td>
+                        <td>
+                            <span class="status-badge status-fail">
+                                FAIL
+                            </span>
+                        </td>
+                        <td>
+                            
+                            <span style="color: #6c757d;">N/A</span>
+                            
+                        </td>
+                        <td>
+                            
+                            <span class="status-badge status-fail">
+                                FAIL
+                            </span>
+                            
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr class="">
+                        <td><strong>12</strong></td>
+                        <td><strong>UBTU-24-100310</strong></td>
+                        <td>Uncomplicated Firewall (UFW) must be in active state</td>
+                        <td class="severity-high">high</td>
+                        <td>
+                            <span class="status-badge status-fail">
+                                FAIL
+                            </span>
+                        </td>
+                        <td>
+                            
+                            <span style="color: #6c757d;">N/A</span>
+                            
+                        </td>
+                        <td>
+                            
+                            <span class="status-badge status-fail">
+                                FAIL
+                            </span>
+                            
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr class="">
+                        <td><strong>13</strong></td>
+                        <td><strong>UBTU-24-100400</strong></td>
+                        <td>Must install auditd service</td>
+                        <td class="severity-high">high</td>
+                        <td>
+                            <span class="status-badge status-fail">
+                                FAIL
+                            </span>
+                        </td>
+                        <td>
+                            
+                            <span style="color: #6c757d;">N/A</span>
+                            
+                        </td>
+                        <td>
+                            
+                            <span class="status-badge status-fail">
+                                FAIL
+                            </span>
+                            
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr class="">
+                        <td><strong>14</strong></td>
+                        <td><strong>UBTU-24-100410</strong></td>
+                        <td>Auditd service must be enabled and active at boot</td>
+                        <td class="severity-high">high</td>
+                        <td>
+                            <span class="status-badge status-fail">
+                                FAIL
+                            </span>
+                        </td>
+                        <td>
+                            
+                            <span style="color: #6c757d;">N/A</span>
+                            
+                        </td>
+                        <td>
+                            
+                            <span class="status-badge status-fail">
+                                FAIL
+                            </span>
+                            
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr class="">
+                        <td><strong>15</strong></td>
+                        <td><strong>UBTU-24-100450</strong></td>
+                        <td>Audispd must offload audit records to remote server</td>
+                        <td class="severity-high">high</td>
+                        <td>
+                            <span class="status-badge status-fail">
+                                FAIL
+                            </span>
+                        </td>
+                        <td>
+                            
+                            <span style="color: #6c757d;">N/A</span>
+                            
+                        </td>
+                        <td>
+                            
+                            <span class="status-badge status-fail">
+                                FAIL
+                            </span>
+                            
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr class="">
+                        <td><strong>16</strong></td>
+                        <td><strong>UBTU-24-100500</strong></td>
+                        <td>OS must install apparmor package</td>
+                        <td class="severity-high">high</td>
+                        <td>
+                            <span class="status-badge status-fail">
+                                FAIL
+                            </span>
+                        </td>
+                        <td>
+                            
+                            <span style="color: #6c757d;">N/A</span>
+                            
+                        </td>
+                        <td>
+                            
+                            <span class="status-badge status-fail">
+                                FAIL
+                            </span>
+                            
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr class="">
+                        <td><strong>17</strong></td>
+                        <td><strong>UBTU-24-100510</strong></td>
+                        <td>OS must be configured to use AppArmor</td>
+                        <td class="severity-high">high</td>
+                        <td>
+                            <span class="status-badge status-fail">
+                                FAIL
+                            </span>
+                        </td>
+                        <td>
+                            
+                            <span style="color: #6c757d;">N/A</span>
+                            
+                        </td>
+                        <td>
+                            
+                            <span class="status-badge status-fail">
+                                FAIL
+                            </span>
+                            
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr class="">
+                        <td><strong>18</strong></td>
+                        <td><strong>UBTU-24-100600</strong></td>
+                        <td>OS must install libpam-pwquality package</td>
+                        <td class="severity-high">high</td>
+                        <td>
+                            <span class="status-badge status-fail">
+                                FAIL
+                            </span>
+                        </td>
+                        <td>
+                            
+                            <span style="color: #6c757d;">N/A</span>
+                            
+                        </td>
+                        <td>
+                            
+                            <span class="status-badge status-fail">
+                                FAIL
+                            </span>
+                            
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr class="">
+                        <td><strong>19</strong></td>
+                        <td><strong>UBTU-24-100650</strong></td>
+                        <td>OS must install sssd package</td>
+                        <td class="severity-high">high</td>
+                        <td>
+                            <span class="status-badge status-fail">
+                                FAIL
+                            </span>
+                        </td>
+                        <td>
+                            
+                            <span style="color: #6c757d;">N/A</span>
+                            
+                        </td>
+                        <td>
+                            
+                            <span class="status-badge status-fail">
+                                FAIL
+                            </span>
+                            
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr class="">
+                        <td><strong>20</strong></td>
+                        <td><strong>UBTU-24-100660</strong></td>
+                        <td>OS must use sssd to provide multifactor authentication (MFA)</td>
+                        <td class="severity-high">high</td>
+                        <td>
+                            <span class="status-badge status-fail">
+                                FAIL
+                            </span>
+                        </td>
+                        <td>
+                            
+                            <span style="color: #6c757d;">N/A</span>
+                            
+                        </td>
+                        <td>
+                            
+                            <span class="status-badge status-fail">
+                                FAIL
+                            </span>
+                            
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr class="">
+                        <td><strong>21</strong></td>
+                        <td><strong>UBTU-24-100700</strong></td>
+                        <td>OS must install chrony package for time synchronization</td>
+                        <td class="severity-high">high</td>
+                        <td>
+                            <span class="status-badge status-fail">
+                                FAIL
+                            </span>
+                        </td>
+                        <td>
+                            
+                            <span style="color: #6c757d;">N/A</span>
+                            
+                        </td>
+                        <td>
+                            
+                            <span class="status-badge status-fail">
+                                FAIL
+                            </span>
+                            
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr class="">
+                        <td><strong>22</strong></td>
+                        <td><strong>UBTU-24-100800</strong></td>
+                        <td>OS must install SSH (OpenSSH server)</td>
+                        <td class="severity-high">high</td>
+                        <td>
+                            <span class="status-badge status-fail">
+                                FAIL
+                            </span>
+                        </td>
+                        <td>
+                            
+                            <span style="color: #6c757d;">N/A</span>
+                            
+                        </td>
+                        <td>
+                            
+                            <span class="status-badge status-fail">
+                                FAIL
+                            </span>
+                            
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr class="">
+                        <td><strong>23</strong></td>
+                        <td><strong>UBTU-24-100810</strong></td>
+                        <td>OS must use SSH to protect confidentiality and integrity of information</td>
+                        <td class="severity-high">high</td>
+                        <td>
+                            <span class="status-badge status-fail">
+                                FAIL
+                            </span>
+                        </td>
+                        <td>
+                            
+                            <span style="color: #6c757d;">N/A</span>
+                            
+                        </td>
+                        <td>
+                            
+                            <span class="status-badge status-fail">
+                                FAIL
+                            </span>
+                            
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr class="">
+                        <td><strong>24</strong></td>
+                        <td><strong>UBTU-24-100820</strong></td>
+                        <td>OS must configure SSH daemon to use FIPS 140-3 approved ciphers</td>
+                        <td class="severity-high">high</td>
+                        <td>
+                            <span class="status-badge status-fail">
+                                FAIL
+                            </span>
+                        </td>
+                        <td>
+                            
+                            <span style="color: #6c757d;">N/A</span>
+                            
+                        </td>
+                        <td>
+                            
+                            <span class="status-badge status-fail">
+                                FAIL
+                            </span>
+                            
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr class="">
+                        <td><strong>25</strong></td>
+                        <td><strong>UBTU-24-100830</strong></td>
+                        <td>OS must configure SSH daemon to use FIPS 140-3 approved MACs</td>
+                        <td class="severity-high">high</td>
+                        <td>
+                            <span class="status-badge status-fail">
+                                FAIL
+                            </span>
+                        </td>
+                        <td>
+                            
+                            <span style="color: #6c757d;">N/A</span>
+                            
+                        </td>
+                        <td>
+                            
+                            <span class="status-badge status-fail">
+                                FAIL
+                            </span>
+                            
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr class="">
+                        <td><strong>26</strong></td>
+                        <td><strong>UBTU-24-100840</strong></td>
+                        <td>SSH server must use only FIPS-validated key exchange algorithms</td>
+                        <td class="severity-high">high</td>
+                        <td>
+                            <span class="status-badge status-fail">
+                                FAIL
+                            </span>
+                        </td>
+                        <td>
+                            
+                            <span style="color: #6c757d;">N/A</span>
+                            
+                        </td>
+                        <td>
+                            
+                            <span class="status-badge status-fail">
+                                FAIL
+                            </span>
+                            
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr class="">
+                        <td><strong>27</strong></td>
+                        <td><strong>UBTU-24-100900</strong></td>
+                        <td>OS must accept PIV credentials (CAC/smart card) - install opensc-pkcs11</td>
+                        <td class="severity-medium">medium</td>
+                        <td>
+                            <span class="status-badge status-fail">
+                                FAIL
+                            </span>
+                        </td>
+                        <td>
+                            
+                            <span style="color: #6c757d;">N/A</span>
+                            
+                        </td>
+                        <td>
+                            
+                            <span class="status-badge status-fail">
+                                FAIL
+                            </span>
+                            
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr class="">
+                        <td><strong>28</strong></td>
+                        <td><strong>UBTU-24-102000</strong></td>
+                        <td>OS must require authentication when booting into single-user or maintenance mode</td>
+                        <td class="severity-high">high</td>
+                        <td>
+                            <span class="status-badge status-fail">
+                                FAIL
+                            </span>
+                        </td>
+                        <td>
+                            
+                            <span style="color: #6c757d;">N/A</span>
+                            
+                        </td>
+                        <td>
+                            
+                            <span class="status-badge status-fail">
+                                FAIL
+                            </span>
+                            
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr class="">
+                        <td><strong>29</strong></td>
+                        <td><strong>UBTU-24-200060</strong></td>
+                        <td>OS must automatically terminate user session after 10 minutes of inactivity</td>
+                        <td class="severity-medium">medium</td>
+                        <td>
+                            <span class="status-badge status-fail">
+                                FAIL
+                            </span>
+                        </td>
+                        <td>
+                            
+                            <span style="color: #6c757d;">N/A</span>
+                            
+                        </td>
+                        <td>
+                            
+                            <span class="status-badge status-fail">
+                                FAIL
+                            </span>
+                            
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr class="">
+                        <td><strong>30</strong></td>
+                        <td><strong>UBTU-24-200250</strong></td>
+                        <td>OS must automatically expire temporary accounts within 72 hours</td>
+                        <td class="severity-medium">medium</td>
+                        <td>
+                            <span class="status-badge status-fail">
+                                FAIL
+                            </span>
+                        </td>
+                        <td>
+                            
+                            <span style="color: #6c757d;">N/A</span>
+                            
+                        </td>
+                        <td>
+                            
+                            <span class="status-badge status-fail">
+                                FAIL
+                            </span>
+                            
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr class="">
+                        <td><strong>31</strong></td>
+                        <td><strong>UBTU-24-200260</strong></td>
+                        <td>OS must automatically lock user accounts after 30 days of inactivity</td>
+                        <td class="severity-medium">medium</td>
+                        <td>
+                            <span class="status-badge status-fail">
+                                FAIL
+                            </span>
+                        </td>
+                        <td>
+                            
+                            <span style="color: #6c757d;">N/A</span>
+                            
+                        </td>
+                        <td>
+                            
+                            <span class="status-badge status-fail">
+                                FAIL
+                            </span>
+                            
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr class="">
+                        <td><strong>32</strong></td>
+                        <td><strong>UBTU-24-200000</strong></td>
+                        <td>OS must limit concurrent sessions to ten for all accounts</td>
+                        <td class="severity-low">low</td>
+                        <td>
+                            <span class="status-badge status-fail">
+                                FAIL
+                            </span>
+                        </td>
+                        <td>
+                            
+                            <span style="color: #6c757d;">N/A</span>
+                            
+                        </td>
+                        <td>
+                            
+                            <span class="status-badge status-fail">
+                                FAIL
+                            </span>
+                            
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr class="">
+                        <td><strong>33</strong></td>
+                        <td><strong>UBTU-24-300001</strong></td>
+                        <td>OS must be configured to prevent APT from installing patches, service packs, device drivers</td>
+                        <td class="severity-low">low</td>
+                        <td>
+                            <span class="status-badge status-fail">
+                                FAIL
+                            </span>
+                        </td>
+                        <td>
+                            
+                            <span style="color: #6c757d;">N/A</span>
+                            
+                        </td>
+                        <td>
+                            
+                            <span class="status-badge status-fail">
+                                FAIL
+                            </span>
+                            
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr class="">
+                        <td><strong>34</strong></td>
+                        <td><strong>UBTU-24-300017</strong></td>
+                        <td>OS must enforce delay of at least four seconds between login prompts following a failed login</td>
+                        <td class="severity-low">low</td>
+                        <td>
+                            <span class="status-badge status-fail">
+                                FAIL
+                            </span>
+                        </td>
+                        <td>
+                            
+                            <span style="color: #6c757d;">N/A</span>
+                            
+                        </td>
+                        <td>
+                            
+                            <span class="status-badge status-fail">
+                                FAIL
+                            </span>
+                            
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr class="">
+                        <td><strong>35</strong></td>
+                        <td><strong>UBTU-24-400340</strong></td>
+                        <td>OS must be configured so PAM prohibits use of cached authentications after one day</td>
+                        <td class="severity-low">low</td>
+                        <td>
+                            <span class="status-badge status-fail">
+                                FAIL
+                            </span>
+                        </td>
+                        <td>
+                            
+                            <span style="color: #6c757d;">N/A</span>
+                            
+                        </td>
+                        <td>
+                            
+                            <span class="status-badge status-fail">
+                                FAIL
+                            </span>
+                            
+                            
+                        </td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="footer">
+            <p>Generated by STIG Automation Tool | 2025-12-26 06:28:34</p>
+            <p>Ubuntu 24.04 LTS Security Technical Implementation Guide</p>
+        </div>
+    </div>
+</body>
+</html>
+        

@@ -2,11 +2,26 @@
 # Remediation: Add AIDE rules for audit tools
 # Rule: UBTU-24-90890
 
-# Check if running as root
-if [ "$EUID" -ne 0 ]; then
-    echo "ERROR: This script must be run as root or with sudo"
-    exit 1
+# Source common functions
+SCRIPT_DIR="$(dirname "$0")"
+if [ -f "$SCRIPT_DIR/common.sh" ]; then
+    source "$SCRIPT_DIR/common.sh"
 fi
+
+# Function to wait for dpkg lock (inline if common.sh not available)
+wait_for_lock() {
+    local max_wait=60
+    local waited=0
+    while fuser /var/lib/dpkg/lock-frontend >/dev/null 2>&1; do
+        if [ $waited -ge $max_wait ]; then
+            echo "WARNING: dpkg lock timeout"
+            return 1
+        fi
+        sleep 3
+        waited=$((waited + 3))
+    done
+    return 0
+}
 
 echo "Adding AIDE rules for audit tools protection..."
 
@@ -15,7 +30,7 @@ AIDE_CONF="/etc/aide/aide.conf"
 # Check if AIDE is installed (should be installed by earlier rules)
 if ! dpkg -l | grep -q "^ii.*aide"; then
     echo "AIDE not installed. Installing AIDE..."
-    apt-get update -qq 2>&1 | tail -5
+    apt-get update -qq
     apt-get install -y aide aide-common
     
     if [ $? -ne 0 ]; then
