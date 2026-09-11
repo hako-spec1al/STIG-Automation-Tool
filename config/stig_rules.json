@@ -155,33 +155,6 @@
       "category": "mandatory_access_control"
     },
     {
-      "rule_id": "UBTU-24-100600",
-      "severity": "high",
-      "title": "OS must install libpam-pwquality package",
-      "description": "Ensure passwords are strong enough to resist brute-force and cracking",
-      "check_script": "UBTU-24-100600.sh",
-      "remediation_script": "UBTU-24-100600.sh",
-      "category": "authentication"
-    },
-    {
-      "rule_id": "UBTU-24-100650",
-      "severity": "high",
-      "title": "OS must install sssd package",
-      "description": "Provides centralized authentication and MFA support for privileged accounts",
-      "check_script": "UBTU-24-100650.sh",
-      "remediation_script": "UBTU-24-100650.sh",
-      "category": "authentication"
-    },
-    {
-      "rule_id": "UBTU-24-100660",
-      "severity": "high",
-      "title": "OS must use sssd to provide multifactor authentication (MFA)",
-      "description": "Ensure SSSD service is running to support MFA for privileged accounts",
-      "check_script": "UBTU-24-100660.sh",
-      "remediation_script": "UBTU-24-100660.sh",
-      "category": "authentication"
-    },
-    {
       "rule_id": "UBTU-24-100700",
       "severity": "high",
       "title": "OS must install chrony package for time synchronization",

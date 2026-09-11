@@ -27,17 +27,11 @@ echo "Adding AIDE rules for audit tools protection..."
 
 AIDE_CONF="/etc/aide/aide.conf"
 
-# Install AIDE if not present
-if [ ! -f "$AIDE_CONF" ]; then
+# Check if AIDE is installed (should be installed by earlier rules)
+if ! dpkg -l | grep -q "^ii.*aide"; then
     echo "AIDE not installed. Installing AIDE..."
-    
-    # Wait for any existing apt processes
-    wait_for_lock
-    
-    apt-get update -qq 2>&1 | tail -3
-    
-    wait_for_lock
-    DEBIAN_FRONTEND=noninteractive apt-get install -y aide aide-common 2>&1 | tail -5
+    apt-get update -qq
+    apt-get install -y aide aide-common
     
     if [ $? -ne 0 ]; then
         echo "ERROR: Failed to install AIDE"
@@ -45,6 +39,12 @@ if [ ! -f "$AIDE_CONF" ]; then
     fi
     
     echo "AIDE installed successfully"
+fi
+
+# Check if AIDE config exists
+if [ ! -f "$AIDE_CONF" ]; then
+    echo "ERROR: AIDE configuration file not found at $AIDE_CONF"
+    exit 1
 fi
 
 # Backup configuration file
