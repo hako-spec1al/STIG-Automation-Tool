@@ -6,7 +6,7 @@ This project demonstrates practical DevOps and security automation skills: repea
 
 ## Project Highlights
 
-- **36 automated controls** with separate check and remediation scripts
+- **32 configured controls** with separate check and remediation scripts
 - **CAT I, CAT II, and CAT III** security checks
 - **Check-only mode** for safe assessment before making changes
 - **Auto-remediation with re-validation** and pre/post compliance reports
@@ -41,27 +41,25 @@ Load rules -> Pre-check -> Pre-report -> Remediate -> Post-check -> Post-report
 
 ```text
 .
-├── stig_automation/
-│   ├── main.py                    # CLI entry point and orchestration pipeline
-│   ├── requirements.txt           # Python dependencies
-│   ├── config/
-│   │   ├── settings.yaml          # Runtime paths and logging configuration
-│   │   └── stig_rules.json         # Rule metadata and severity mapping
-│   ├── lib/
-│   │   ├── checker.py              # Check execution and result collection
-│   │   ├── executor.py             # Local and SSH command execution
-│   │   ├── logger.py               # Console and rotating-file logging
-│   │   ├── remediator.py            # Remediation orchestration
-│   │   └── reporter.py              # HTML and JSON report generation
-│   ├── scripts/
-│   │   ├── checks/                 # 36 STIG validation scripts
-│   │   └── remediation/            # Remediation scripts and shared helpers
-│   ├── reports/                    # Generated reports (ignored by Git)
-│   ├── logs/                       # Runtime logs (ignored by Git)
-│   ├── run_with_sudo.sh            # Privilege-aware execution wrapper
-│   ├── quick_start.sh              # Dependency and permission setup
-│   └── TESTING.md                  # Local and SSH testing notes
-├── README.md
+├── main.py                    # CLI entry point and orchestration pipeline
+├── requirements.txt           # Python dependencies
+├── config/
+│   ├── settings.yaml          # Runtime paths and logging configuration
+│   └── stig_rules.json         # Rule metadata and severity mapping
+├── lib/
+│   ├── checker.py              # Check execution and result collection
+│   ├── executor.py             # Local and SSH command execution
+│   ├── logger.py               # Console and rotating-file logging
+│   ├── remediator.py           # Remediation orchestration
+│   └── reporter.py              # HTML and JSON report generation
+├── scripts/
+│   ├── checks/                 # STIG validation scripts
+│   └── remediation/            # Remediation scripts and shared helpers
+├── reports/                    # Generated reports (ignored by Git)
+├── logs/                       # Runtime logs (ignored by Git)
+├── quick_start.sh              # Dependency and permission setup
+├── run_with_sudo.sh            # Privilege-aware execution wrapper
+├── TESTING.md                  # Local and SSH testing guide
 └── .gitignore
 ```
 
@@ -80,12 +78,12 @@ Load rules -> Pre-check -> Pre-report -> Remediate -> Post-check -> Post-report
 
 ```bash
 git clone <repository-url>
-cd <repository-name>/stig_automation
+cd <repository-name>
 
-python3 -m venv venv
-source venv/bin/activate
+python3 -m venv .venv
+source .venv/bin/activate
 pip install -r requirements.txt
-chmod +x quick_start.sh run_with_sudo.sh setup_permissions.sh
+chmod +x quick_start.sh run_with_sudo.sh
 ```
 
 ### Run a safe assessment
@@ -139,13 +137,13 @@ Generated reports and logs are excluded from version control.
 
 ## Scope and Limitations
 
-This project currently targets Ubuntu 24.04 LTS and the controls defined in `stig_automation/config/stig_rules.json`. Test remediation in a controlled environment before production use. The tool is an automation project and does not replace security review, change management, or a formal compliance assessment.
+This project currently targets Ubuntu 24.04 LTS and the controls defined in `config/stig_rules.json`. Test remediation in a controlled environment before production use. The tool is an automation project and does not replace security review, change management, or a formal compliance assessment.
 
 ## Documentation
 
-- [Detailed testing strategy](stig_automation/TESTING.md)
-- [STIG rule definitions](stig_automation/config/stig_rules.json)
-- [Runtime configuration](stig_automation/config/settings.yaml)
+- [Detailed testing strategy](TESTING.md)
+- [STIG rule definitions](config/stig_rules.json)
+- [Runtime configuration](config/settings.yaml)
 
 ## License
 

@@ -5,7 +5,7 @@ STIG Checker - Engine kiểm tra các STIG rules
 import os
 import json
 import logging
-from typing import Dict, List, Optional
+from typing import Any, Dict, List, Optional
 from datetime import datetime
 from .executor import CommandExecutor
 
