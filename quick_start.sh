@@ -1,4 +1,6 @@
 #!/bin/bash
+set -euo pipefail
+
 # Quick start script
 
 echo "================================================"
@@ -18,15 +20,15 @@ echo "✓ Python 3 found: $(python3 --version)"
 echo ""
 echo "Installing Python dependencies..."
 sudo apt-get install -y python3-pip python3-venv
-python3 -m venv venv
-source venv/bin/activate
-pip3 install -r requirements.txt
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
 
 # Set permissions
 echo ""
 echo "Setting script permissions..."
-bash setup_permissions.sh
-chmod +x run_with_sudo.sh
+chmod +x scripts/checks/*.sh scripts/remediation/*.sh
+chmod +x main.py quick_start.sh run_with_sudo.sh
 
 # Create directories
 echo ""
